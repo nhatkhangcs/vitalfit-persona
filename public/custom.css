@@ -1,0 +1,43 @@
+/* Tùy chỉnh cho toàn bộ trang */
+#root {
+    background-image: url('assets/hcmut-slide-background.png'); /* Đường dẫn đến hình nền */
+    background-size: cover; /* Đảm bảo hình nền che phủ toàn bộ trang */
+    background-repeat: no-repeat; /* Ngăn hình nền lặp lại */
+    background-position: center center; /* Căn giữa hình nền */
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+}
+
+/* Đảm bảo nội dung hiển thị phía trên lớp phủ */
+#root > * {
+    position: relative;
+    z-index: 1;
+}
+
+#header > img:nth-child(2) {
+    max-height: 40px !important;
+}
+
+/* after opening the sidebar */
+.css-14k6mw7 > img:nth-child(1) {
+    max-height: 40px !important;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 10px; /* Căn lề dưới */
+    right: 10px; /* Căn lề phải */
+    opacity: 0.5; /* Độ mờ của watermark */
+    z-index: 2; /* Đảm bảo watermark hiển thị trên các thành phần khác */
+    pointer-events: none; /* Ngăn chặn tương tác với watermark */
+    font-size: 12px; /* Kích thước chữ của watermark */
+    color: #000; /* Màu chữ của watermark */
+    font-family: Arial, sans-serif; /* Phông chữ của watermark */
+    text-align: right; /* Căn lề phải cho văn bản */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Hiệu ứng bóng cho văn bản */
+    white-space: nowrap; /* Ngăn văn bản xuống dòng */
+    line-height: 1.5; /* Khoảng cách dòng */
+    padding: 5px; /* Khoảng đệm xung quanh văn bản */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng mờ cho watermark */
+    border-radius: 5px; /* Bo góc cho watermark */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ cho watermark */
+}
